@@ -1,0 +1,202 @@
+[
+  {
+    "timestamp": "2026-08-01T10:00:00.000Z",
+    "event": "user_signed_up",
+    "distinct_id": "user_physician_001",
+    "properties": {
+      "user_id": "user_physician_001",
+      "role": "physician",
+      "discoverySource": "OMA Website",
+      "province": "ON",
+      "specialty": "Family Medicine"
+    }
+  },
+  {
+    "timestamp": "2026-08-01T10:05:00.000Z",
+    "event": "onboarding_started",
+    "distinct_id": "user_physician_001",
+    "properties": {
+      "user_id": "user_physician_001",
+      "role": "physician",
+      "province": "ON"
+    }
+  },
+  {
+    "timestamp": "2026-08-01T10:20:00.000Z",
+    "event": "onboarding_completed",
+    "distinct_id": "user_physician_001",
+    "properties": {
+      "user_id": "user_physician_001",
+      "role": "physician",
+      "province": "ON"
+    }
+  },
+  {
+    "timestamp": "2026-08-02T14:00:00.000Z",
+    "event": "locum_search_started",
+    "distinct_id": "user_physician_001",
+    "properties": {
+      "user_id": "user_physician_001",
+      "role": "physician",
+      "specialty": "Family Medicine",
+      "province": "ON"
+    }
+  },
+  {
+    "timestamp": "2026-08-02T14:03:00.000Z",
+    "event": "locum_viewed",
+    "distinct_id": "user_physician_001",
+    "properties": {
+      "user_id": "user_physician_001",
+      "locum_id": "locum_001",
+      "job_id": "JOB-001",
+      "slug": "family-medicine-toronto",
+      "specialty": "Family Medicine",
+      "province": "ON",
+      "city": "Toronto",
+      "pay": 1500,
+      "job_type": "FT"
+    }
+  },
+  {
+    "timestamp": "2026-08-02T14:08:00.000Z",
+    "event": "locum_saved",
+    "distinct_id": "user_physician_001",
+    "properties": {
+      "user_id": "user_physician_001",
+      "locum_id": "locum_001"
+    }
+  },
+  {
+    "timestamp": "2026-08-02T14:10:00.000Z",
+    "event": "locum_applied",
+    "distinct_id": "user_physician_001",
+    "properties": {
+      "user_id": "user_physician_001",
+      "locum_id": "locum_001",
+      "specialty": "Family Medicine",
+      "province": "ON",
+      "city": "Toronto",
+      "pay": 1500,
+      "job_type": "FT"
+    }
+  },
+  {
+    "timestamp": "2026-08-03T09:00:00.000Z",
+    "event": "user_signed_up",
+    "distinct_id": "user_clinic_001",
+    "properties": {
+      "user_id": "user_clinic_001",
+      "role": "clinic",
+      "discoverySource": "Colleague or friend",
+      "province": "ON"
+    }
+  },
+  {
+    "timestamp": "2026-08-03T09:30:00.000Z",
+    "event": "clinic_created_posting",
+    "distinct_id": "user_clinic_001",
+    "properties": {
+      "user_id": "user_clinic_001",
+      "locum_id": "locum_001",
+      "job_id": "JOB-001",
+      "slug": "family-medicine-toronto",
+      "specialty": "Family Medicine",
+      "province": "ON",
+      "city": "Toronto",
+      "job_type": "FT",
+      "pay": 1500,
+      "facilityEMR": "PS Suite EMR",
+      "isPostedByRecruiter": false,
+      "isUsingJetpay": true,
+      "isDepositRequested": false
+    }
+  },
+  {
+    "timestamp": "2026-08-04T11:00:00.000Z",
+    "event": "reservation_created",
+    "distinct_id": "user_physician_001",
+    "properties": {
+      "user_id": "user_physician_001",
+      "locum_id": "locum_001",
+      "specialty": "Family Medicine",
+      "province": "ON",
+      "pay": 1500
+    }
+  },
+  {
+    "timestamp": "2026-08-05T15:00:00.000Z",
+    "event": "clinic_filled_posting",
+    "distinct_id": "user_clinic_001",
+    "properties": {
+      "user_id": "user_clinic_001",
+      "locum_id": "locum_001",
+      "reservation_id": "reservation_001",
+      "specialty": "Family Medicine",
+      "province": "ON",
+      "pay": 1500
+    }
+  },
+  {
+    "timestamp": "2026-08-06T17:00:00.000Z",
+    "event": "locum_completed",
+    "distinct_id": "user_physician_001",
+    "properties": {
+      "user_id": "user_physician_001",
+      "locum_id": "locum_001",
+      "duration": 5,
+      "pay": 1500,
+      "specialty": "Family Medicine",
+      "province": "ON",
+      "job_type": "FT"
+    }
+  },
+  {
+    "timestamp": "2026-08-07T13:00:00.000Z",
+    "event": "user_signed_up",
+    "distinct_id": "user_physician_002",
+    "properties": {
+      "user_id": "user_physician_002",
+      "role": "physician",
+      "discoverySource": "LinkedIn",
+      "province": "BC",
+      "specialty": "Radiology"
+    }
+  },
+  {
+    "timestamp": "2026-08-07T13:30:00.000Z",
+    "event": "locum_search_started",
+    "distinct_id": "user_physician_002",
+    "properties": {
+      "user_id": "user_physician_002",
+      "role": "physician",
+      "specialty": "Radiology",
+      "province": "BC"
+    }
+  },
+  {
+    "timestamp": "2026-08-07T13:35:00.000Z",
+    "event": "locum_viewed",
+    "distinct_id": "user_physician_002",
+    "properties": {
+      "user_id": "user_physician_002",
+      "locum_id": "locum_002",
+      "job_id": "JOB-002",
+      "slug": "radiology-vancouver",
+      "specialty": "Radiology",
+      "province": "BC",
+      "city": "Vancouver",
+      "pay": 2200,
+      "job_type": "CONTRACT"
+    }
+  },
+  {
+    "timestamp": "2026-08-07T13:40:00.000Z",
+    "event": "notification_clicked",
+    "distinct_id": "user_physician_002",
+    "properties": {
+      "user_id": "user_physician_002",
+      "notification_type": "new_match"
+    }
+  }
+]

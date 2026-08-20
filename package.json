@@ -1,0 +1,21 @@
+{
+  "name": "locvm-posthog-analytics",
+  "version": "1.0.0",
+  "private": true,
+  "description": "PostHog product analytics capture and scheduled Excel-friendly exports for LOCVM.",
+  "type": "module",
+  "scripts": {
+    "export": "node src/exportPosthogEvents.js",
+    "export:daily": "node src/exportPosthogEvents.js --days=1",
+    "export:weekly": "node src/exportPosthogEvents.js --days=7",
+    "matrix": "node src/generatePosthogMatrix.js",
+    "matrix:daily": "node src/generatePosthogMatrix.js --days=1",
+    "matrix:weekly": "node src/generatePosthogMatrix.js --days=7",
+    "matrix:mock": "node src/generatePosthogMatrix.js --mockEvents=mock_data/mock_posthog_events.csv --start=2026-08-01 --end=2026-08-07",
+    "report:mock": "node src/generateInvestorReport.js --events=mock_data/mock_posthog_events.csv --start=2026-08-01 --end=2026-08-07",
+    "check": "node --check src/events.js && node --check src/locvmSchemaMapping.js && node --check src/posthogAnalytics.js && node --check src/exportPosthogEvents.js && node --check src/generatePosthogMatrix.js && node --check src/generateInvestorReport.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

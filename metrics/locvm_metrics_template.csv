@@ -1,0 +1,29 @@
+metric_key,metric_name,metric_category,source_system,source_dataset,schema_fields,description,event_name,aggregation,property,filters_json,group_by,active
+signups_total,Total Signups,Activation,PostHog,events,users._id; users.role; users.discoverySource; users.medicalProvince,Total users who signed up,user_signed_up,count,,{},role,true
+physician_signups,Physician Signups,Activation,PostHog,events,users.role,Physician signup count,user_signed_up,count,,"{""role"":""physician""}",province,true
+clinic_signups,Clinic Signups,Activation,PostHog,events,users.role,Clinic signup count,user_signed_up,count,,"{""role"":""clinic""}",province,true
+logins_unique_users,Unique Logged In Users,Engagement,PostHog,events,users._id; users.role,Unique users who logged in,user_logged_in,unique_users,,{},role,true
+activation_onboarding_started,Onboarding Started,Activation,PostHog,events,users.onboardingStep; users.isOnboardingCompleted,Users who started onboarding,onboarding_started,unique_users,,{},role,true
+activation_onboarding_completed,Onboarding Completed,Activation,PostHog,events,users.isOnboardingCompleted,Users who completed onboarding,onboarding_completed,unique_users,,{},role,true
+profile_completed,Profile Completed,Activation,PostHog,events,users.isProfileComplete; users.profile.profileCompletion,Users who completed profile,profile_completed,unique_users,,{},role,true
+locum_searches,Locum Searches,Job Discovery,PostHog,events,users.preferences.preferredProvinces; users.medSpeciality,Number of locum search starts,locum_search_started,count,,{},province,true
+locum_views,Locum Views,Job Discovery,PostHog,events,locums._id; locums.medSpeciality; locums.fullAddress.province,Number of locum views,locum_viewed,count,,{},province,true
+locum_views_by_specialty,Locum Views By Specialty,Job Discovery,PostHog,events,locums.medSpeciality,Number of locum views by specialty,locum_viewed,count,,{},specialty,true
+locum_saves,Locum Saves,Job Discovery,PostHog,events,users.reservationsList.savedLocums; locums._id,Number of saved locums,locum_saved,count,,{},,true
+locum_applications,Locum Applications,Conversion,PostHog,events,users.reservationsList.appliedLocums; locums._id,Number of locum applications,locum_applied,count,,{},province,true
+locum_applications_by_specialty,Locum Applications By Specialty,Conversion,PostHog,events,locums.medSpeciality,Number of locum applications by specialty,locum_applied,count,,{},specialty,true
+reservation_created,Reservations Created,Conversion,PostHog,events,users.reservationsList.reservedLocums; locums.reservationId,Number of created reservations,reservation_created,count,,{},province,true
+locum_completion,Completed Locums,Conversion,PostHog,events,users.reservationsList.completedLocums,Number of completed locums,locum_completed,count,,{},province,true
+clinic_created_postings,Clinic Created Postings,Demand Activation,PostHog,events,users.reservationsList.createdLocums; locums.locumCreator,Number of clinic postings created,clinic_created_posting,count,,{},province,true
+clinic_created_postings_by_specialty,Clinic Created Postings By Specialty,Demand Activation,PostHog,events,locums.medSpeciality,Clinic postings created by specialty,clinic_created_posting,count,,{},specialty,true
+clinic_filled_postings,Clinic Filled Postings,Marketplace Liquidity,PostHog,events,locums.reservationId,Number of clinic postings filled,clinic_filled_posting,count,,{},province,true
+marketplace_gmv_completed,Marketplace GMV Completed,Revenue Proxy,PostHog,events,locums.locumPay,Sum of pay attached to completed locums,locum_completed,sum,pay,{},province,true
+average_completed_locum_pay,Average Completed Locum Pay,Revenue Proxy,PostHog,events,locums.locumPay,Average pay for completed locums,locum_completed,avg,pay,{},province,true
+notification_clicks,Notification Clicks,Engagement,PostHog,events,users.notificationConsent; users.notificationFrequency,Notification clicks by type,notification_clicked,count,,{},notification_type,true
+mongo_marketplace_liquidity_score,Marketplace Liquidity Score,Investor Metric,MongoDB,locums,locums.reservationId; locums._id,Filled locum postings divided by total locum postings,,,,,province,false
+mongo_supply_activation_rate,Supply Activation Rate,Investor Metric,MongoDB,users,users.role; users.preferences.isLookingForLocums,Physicians looking for locums divided by total physicians,,,,,province,false
+mongo_demand_activation_rate,Demand Activation Rate,Investor Metric,MongoDB,users,users.role; users.reservationsList.createdLocums,Clinics creating postings divided by total clinics,,,,,province,false
+mongo_marketplace_balance_ratio,Marketplace Balance Ratio,Investor Metric,MongoDB,users; locums,users.preferences.isLookingForLocums; locums.reservationId,Active physicians divided by open locum jobs,,,,,province,false
+mongo_physician_engagement_depth,Physician Engagement Depth,Investor Metric,MongoDB,users,users.reservationsList.savedLocums; users.reservationsList.appliedLocums; users.reservationsList.reservedLocums; users.reservationsList.completedLocums,Physician marketplace actions divided by active physicians,,,,,province,false
+mongo_locum_completion_rate,Locum Completion Rate,Investor Metric,MongoDB,users,users.reservationsList.completedLocums; users.reservationsList.reservedLocums,Completed locums divided by reserved locums,,,,,province,false
+mongo_marketplace_gmv_reserved,Marketplace GMV Reserved,Investor Metric,MongoDB,locums,locums.locumPay; locums.reservationId,Sum locumPay where reservationId exists,,,,,province,false

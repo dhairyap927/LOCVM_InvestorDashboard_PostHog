@@ -1,0 +1,21 @@
+timestamp,event,distinct_id,user_id,role,locum_id,job_id,slug,specialty,province,city,pay,job_type,notification_type,properties_json
+2026-08-01T09:00:00.000Z,user_signed_up,u_phys_001,u_phys_001,physician,,,,Family Medicine,ON,Toronto,,,,{}
+2026-08-01T09:05:00.000Z,onboarding_started,u_phys_001,u_phys_001,physician,,,,Family Medicine,ON,Toronto,,,,{}
+2026-08-01T09:20:00.000Z,onboarding_completed,u_phys_001,u_phys_001,physician,,,,Family Medicine,ON,Toronto,,,,{}
+2026-08-01T10:10:00.000Z,locum_search_started,u_phys_001,u_phys_001,physician,,,,Family Medicine,ON,Toronto,,,,{}
+2026-08-01T10:15:00.000Z,locum_viewed,u_phys_001,u_phys_001,physician,locum_001,J-1001,toronto-family-med-aug,Family Medicine,ON,Toronto,1500,FT,,{}
+2026-08-01T10:18:00.000Z,locum_saved,u_phys_001,u_phys_001,physician,locum_001,J-1001,toronto-family-med-aug,Family Medicine,ON,Toronto,1500,FT,,{}
+2026-08-01T10:24:00.000Z,locum_applied,u_phys_001,u_phys_001,physician,locum_001,J-1001,toronto-family-med-aug,Family Medicine,ON,Toronto,1500,FT,,{}
+2026-08-02T11:00:00.000Z,user_signed_up,u_clinic_001,u_clinic_001,clinic,,,,,ON,Mississauga,,,,{}
+2026-08-02T11:35:00.000Z,clinic_created_posting,u_clinic_001,u_clinic_001,clinic,locum_002,J-1002,mississauga-radiology-sept,Radiology,ON,Mississauga,1800,CONTRACT,,{}
+2026-08-02T12:15:00.000Z,clinic_created_posting,u_clinic_001,u_clinic_001,clinic,locum_003,J-1003,ottawa-family-med-sept,Family Medicine,ON,Ottawa,1400,PT,,{}
+2026-08-03T08:40:00.000Z,user_signed_up,u_phys_002,u_phys_002,physician,,,,Radiology,BC,Vancouver,,,,{}
+2026-08-03T09:00:00.000Z,onboarding_started,u_phys_002,u_phys_002,physician,,,,Radiology,BC,Vancouver,,,,{}
+2026-08-03T09:45:00.000Z,profile_completed,u_phys_002,u_phys_002,physician,,,,Radiology,BC,Vancouver,,,,{}
+2026-08-03T10:00:00.000Z,locum_search_started,u_phys_002,u_phys_002,physician,,,,Radiology,BC,Vancouver,,,,{}
+2026-08-03T10:20:00.000Z,locum_viewed,u_phys_002,u_phys_002,physician,locum_002,J-1002,mississauga-radiology-sept,Radiology,ON,Mississauga,1800,CONTRACT,,{}
+2026-08-03T10:31:00.000Z,locum_applied,u_phys_002,u_phys_002,physician,locum_002,J-1002,mississauga-radiology-sept,Radiology,ON,Mississauga,1800,CONTRACT,,{}
+2026-08-04T13:00:00.000Z,reservation_created,u_clinic_001,u_clinic_001,clinic,locum_002,J-1002,mississauga-radiology-sept,Radiology,ON,Mississauga,1800,CONTRACT,,{}
+2026-08-05T16:00:00.000Z,clinic_filled_posting,u_clinic_001,u_clinic_001,clinic,locum_002,J-1002,mississauga-radiology-sept,Radiology,ON,Mississauga,1800,CONTRACT,,{}
+2026-08-06T17:30:00.000Z,locum_completed,u_phys_002,u_phys_002,physician,locum_002,J-1002,mississauga-radiology-sept,Radiology,ON,Mississauga,1800,CONTRACT,,{}
+2026-08-06T18:00:00.000Z,notification_clicked,u_phys_002,u_phys_002,physician,,,,Radiology,BC,Vancouver,,,new_match,{}
